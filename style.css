@@ -1,0 +1,272 @@
+/* Global Reset & Full Width */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.container-fluid {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+#mainNavbar {
+  transition: background-color 0.3s, color 0.3s;
+}
+#mainNavbar.scrolled {
+  background-color: #000 !important;
+}
+#mainNavbar.scrolled .nav-link,
+#mainNavbar.scrolled .navbar-brand {
+  color: #fff !important;
+}
+.navbar-toggler-icon {
+  background-image: url('https://placehold.co/30x30?text=Menu');
+}
+.nav-link:hover {
+  color: #0056b3;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 70px; /* offset fixed navbar */
+}
+.hero-row {
+  flex-wrap: nowrap;
+}
+.hero-content {
+  margin-left: 60px;
+}
+
+.hero-content li {
+  list-style-type: none;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.hero-icon {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+/* Ensure carousel controls (arrows) are positioned properly */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: auto;
+  padding: 10px;
+}
+.carousel-control-prev img,
+.carousel-control-next img {
+  display: block;
+}
+
+/* Date & Time Selector Containers */
+.date-selector, .time-selector {
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.date-selector::-webkit-scrollbar,
+.time-selector::-webkit-scrollbar {
+  display: none;
+}
+.date-box, .time-box {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.date-box.selected, .time-box.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+.time-box.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Stage Order Process Cards */
+.stage-card {
+  text-align: center;
+}
+.stage-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.stage-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.stage-number {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+/* ---------------------------------
+demo section
+--------------------------------- */
+/* Demo Radial Section */
+.demo-radial-section {
+  padding: 50px 0;
+}
+
+.demo-radial-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* SVG Lines */
+.demo-radial-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Central Circle */
+.demo-radial-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.demo-radial-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stage Cards */
+.demo-radial-card {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 3;
+}
+.demo-radial-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Position each card (pre-calculated for an 800x800 container) */
+.demo-radial-card-1 { left: 325px; top: 75px; }    /* Top */
+.demo-radial-card-2 { left: 542px; top: 200px; }    /* Top-Right */
+.demo-radial-card-3 { left: 542px; top: 450px; }    /* Bottom-Right */
+.demo-radial-card-4 { left: 325px; top: 575px; }    /* Bottom */
+.demo-radial-card-5 { left: 109px; top: 450px; }    /* Bottom-Left */
+.demo-radial-card-6 { left: 109px; top: 200px; }    /* Top-Left */
+
+/* Add shadow on desktop only */
+@media (min-width: 768px) {
+  .demo-radial-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+/* it ends herer */
+
+/* Testimonial Card & Indicators */
+.testimonial-card {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.testimonial-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+.testimonial-stars i {
+  color: gold;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #888;
+}
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+/* Service Cards */
+.service-card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.hero-list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Contact Box */
+.contact-box {
+  border: 1px solid #ccc;
+  background: url('https://placehold.co/800x200?text=Background') no-repeat center/cover;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Modal Adjustments for Mobile (appear from bottom) */
+@media (max-width: 767px) {
+  .modal-dialog {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* Section Margins */
+section {
+  margin-bottom: 40px;
+}
